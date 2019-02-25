@@ -1,5 +1,5 @@
 /**
- * @copyright Matthew Bill
+ * @copyright Lloyd Baxter
  */
 
 /**

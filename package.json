@@ -11,16 +11,18 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/matthewbill/image-approval.git"
+        "url": "git+https://github.com/lloydbax/image-approval.git"
     },
     "keywords": [
         "mdb"
     ],
-    "author": "Matthew Bill",
+    "author": "Lloyd Baxter",
     "license": "MIT",
-    "homepage": "https://github.com/matthewbill/image-approval#readme",
-    "bugs": "https://github.com/matthewbill/image-approval/issues/",
-    "dependencies": {},
+    "homepage": "https://github.com/lloydbax/image-approval#readme",
+    "bugs": "https://github.com/lloydbax/image-approval/issues/",
+    "dependencies": {
+        "glob": "7.1.3"
+    },
     "devDependencies": {
         "jsdoc": "3.5.5",
         "jest": "24.1.0",

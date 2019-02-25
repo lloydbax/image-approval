@@ -1,11 +1,23 @@
 /**
- * @copyright Matthew Bill
+ * @copyright Lloyd Baxter
 */
 
-const MyModule = require('./src/my-module');
+const path = require('path');
+const glob = require('glob');
 
-console.log('hello world - this should break linting');
+const setImageApprovalNeeded = path.posix.join('cypress', 'snapshots', '**', '__diff_output__', '*.png');
+const savedImage = path.join('cypress', 'snapshots', '[!_]**', '*.png');
+const newImage = path.join('cypress', 'screenshots', '**', '*.png');
 
-module.exports = {
-  MyModule,
-};
+function galleryArray() {
+  const gallery = document.getElementById('approvalImages');
+  const img = document.createElement('img');
+  glob(setImageApprovalNeeded, (err, files) => {
+    for (let i = 0; i < files.length; i += 1) {
+      img.src = files[i];
+      const src = document.getElementById('approvalImages');
+      src.appendChild(img);
+    }
+    console.log(gallery);
+  });
+}
